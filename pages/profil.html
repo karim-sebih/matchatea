@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mon profil - Matcha Tea</title>
+        <link rel="shortcut icon" href="../Images/favicon.ico" type="image/x-icon">
+        <meta name="description" content="Envoyez nous vos requêtes et posez-nous vos questions ici !">
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="../css/matcha3.css">
+    </head>
+    <body>
+        <!--Le header sera commun-->
+        <header>
+            <h1></h1>
+            <nav>
+
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2 class="haut-de-page">Modifier vos informations personnelles</h2>
+            </section>
+            <section>
+                <form id="contact-form" action="/ma-page-de-traitement" method="post">
+                    <li>
+                        <li class="contact-form-space">
+                          <!--Menu déroulant :-->
+                          <label class="contact-left-column" for="gender">Civilité :</label>
+                          <select name="civilité" id="gender">
+                              <option value="">-- Sélectionner ... --</option>
+                              <option value="M">M.</option>
+                              <option value="F">Mme ou Mlle</option>
+                              <option value="autre">Autre</option>
+                              <option value="NSP">Ne souhaite pas répondre</option>
+                          </select>
+                        </li>
+                      <li class="contact-form-space">
+                        <label class="contact-left-column" for="name">Nom&nbsp;:</label>
+                        <input type="text" id="name" name="user_name" />
+                      </li>
+                      <li class="contact-form-space">
+                        <label class="contact-left-column" for="firstname">Prénom&nbsp;:</label>
+                        <input type="text" id="firstname" name="user_firstname" />
+                      </li>
+                      <li class="contact-form-space">
+                        <label class="contact-left-column" for="address">Adresse mail&nbsp;:</label>
+                        <input type="text" id="address" name="user_address"/>
+                      </li>
+                      <li class="contact-form-space">
+                        <label class="contact-left-column" for="add_postale">Adresse postale&nbsp;:</label>
+                        <input type="text" id="msg" name="user_msg"/>
+                      </li>
+                    </li>
+                    <div id="contact-button">
+                        <button type="submit">Valider</button>
+                    </div>                      
+                </form>
+            </section>
+        </main>
+        <!--Le footer sera commun-->
+        <footer>&copy; </footer>
+    </body>
+</html>
