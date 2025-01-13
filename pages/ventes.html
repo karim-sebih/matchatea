@@ -19,39 +19,70 @@
 
 <body>
     <header>
-        <nav>
-            <div>
-                <h1>
-                    <nav>
-                        <ul>
-                            <li><a href="acceuil.html"><img src="../images/matcha tea en blanc.png"
-                                        alt="matcha tea logo" class="logo"></a></li>
-                            <li><a href="../pages/ventes.html">Vente</a></li>
-                            <li><a href="#">Histoire</a></li>
-                            <li><a href="#">À propos</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <div class="box">
-                                <a href="#">
-                                    <input type="search" br placeholder="search...">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </a>
-                            </div>
-                            <a href="#">
-                                <i class="fa-solid fa-user"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
-                        </ul>
-                    </nav>
-                </h1>
+        <div class="navbar">
+            <div class="logo"><a href="../pages/acceuil.html">
+                    <img src="../images/matcha tea en blanc.png" alt="logo matcha tea">
+                </a>
             </div>
-        </nav>
+            <ul class="links">
+                <li><a href="../pages/ventes.html">Vente</a></li>
+                <li><a href="#">Histoire</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="box">
+                <a href="#">
+                    <input type="search" br placeholder="search...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="buttons">
+            <a href="#" class="action-button-user">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="#" class="action-button-shop">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+            <div class="burger-menu-button">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="burger-menu open">
+            <ul class="links">
+                <li><a href="../pages/ventes.html">Vente</a></li>
+                <li><a href="#">Histoire</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
+                <div class="divider"></div>
+                <div class="buttons-burger-menu">
+                    <a href="#" class="action-button-user">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <a href="#" class="action-button-shop">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+            </ul>
+        </div>
     </header>
+    <script>
+        const burgerMenuButton = document.querySelector('.burger-menu-button ')
+        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
+        const burgerMenu = document.querySelector('.burger-menu')
+
+        burgerMenuButton.onclick = function(){
+            burgerMenu.classList.toggle('open')
+            const isOpen = burgerMenu.classList.contains('open')
+            burgerMenuButtonIcon.classList= isOpen ? 'fa-solid fa-x' :'fa-solid fa-bars' 
+        }
+        </script>
     <main>
         <div class="collection">
-            <a href="#thé-matcha"> Nos thés matcha</a>
-            <a href="#Suppléments">Suppléments</a>
+            <a href="#thé-matcha"> Nos thés matcha  </a>
+            
+            <a href="#Suppléments">Suppléments </a>
+           
             <a href="#Accessoires">Accessoires</a>
         </div>
 
@@ -67,7 +98,7 @@
                         <img src="../images/premium-80_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Thé matcha premium</h3>
                         <h6>15,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -82,7 +113,7 @@
                         <img src="../images/HOME-COLAGENO-BOVINO_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Collagène Matcha</h3>
                         <h6>32,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -97,7 +128,7 @@
                         <img src="../images/inner-cure_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Inner cure</h3>
                         <h6>34,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -112,7 +143,7 @@
                         <img src="../images/fwgfswg_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Thé matcha culinaire</h3>
                         <h6>15,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -128,7 +159,7 @@
                         <img src="../images/premium-80_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Thé matcha premium</h3>
                         <h6>15,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -143,7 +174,7 @@
                         <img src="../images/HOME-COLAGENO-BOVINO_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Collagène Matcha</h3>
                         <h6>32,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -158,7 +189,7 @@
                         <img src="../images/inner-cure_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Inner cure</h3>
                         <h6>34,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -173,7 +204,7 @@
                         <img src="../images/fwgfswg_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Thé matcha culinaire</h3>
                         <h6>15,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -190,7 +221,7 @@
                         <img src="../images/premium-80_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Thé matcha premium</h3>
                         <h6>15,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -205,7 +236,7 @@
                         <img src="../images/HOME-COLAGENO-BOVINO_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Collagène Matcha</h3>
                         <h6>32,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -220,7 +251,7 @@
                         <img src="../images/inner-cure_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Inner cure</h3>
                         <h6>34,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -235,7 +266,7 @@
                         <img src="../images/fwgfswg_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Thé matcha culinaire</h3>
                         <h6>15,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -253,7 +284,7 @@
                         <img src="../images/premium-80_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Thé matcha premium</h3>
                         <h6>15,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -268,7 +299,7 @@
                         <img src="../images/HOME-COLAGENO-BOVINO_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Collagène Matcha</h3>
                         <h6>32,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -283,7 +314,7 @@
                         <img src="../images/inner-cure_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Inner cure</h3>
                         <h6>34,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -298,7 +329,7 @@
                         <img src="../images/fwgfswg_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Thé matcha culinaire</h3>
                         <h6>15,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -326,7 +357,7 @@
                         <img src="../images/premium-80_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Thé matcha premium</h3>
                         <h6>15,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -341,7 +372,7 @@
                         <img src="../images/HOME-COLAGENO-BOVINO_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Collagène Matcha</h3>
                         <h6>32,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -356,7 +387,7 @@
                         <img src="../images/inner-cure_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Inner cure</h3>
                         <h6>34,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -371,7 +402,7 @@
                         <img src="../images/fwgfswg_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Thé matcha culinaire</h3>
                         <h6>15,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -387,7 +418,7 @@
                         <img src="../images/premium-80_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Thé matcha premium</h3>
                         <h6>15,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -402,7 +433,7 @@
                         <img src="../images/HOME-COLAGENO-BOVINO_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Collagène Matcha</h3>
                         <h6>32,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -417,7 +448,7 @@
                         <img src="../images/inner-cure_375x375_crop_center.webp" alt="thé matcha premium">
                         <h3>Inner cure</h3>
                         <h6>34,95€</h6>
-                        <ul>
+                        <ul class="star">
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
                             <li><i class="fa-solid fa-star checked"></i></li>
@@ -442,7 +473,7 @@
                             <img src="../images/premium-80_375x375_crop_center.webp" alt="thé matcha premium">
                             <h3>Thé matcha premium</h3>
                             <h6>15,95€</h6>
-                            <ul>
+                            <ul class="star">
                                 <li><i class="fa-solid fa-star checked"></i></li>
                                 <li><i class="fa-solid fa-star checked"></i></li>
                                 <li><i class="fa-solid fa-star checked"></i></li>
@@ -457,7 +488,7 @@
                             <img src="../images/HOME-COLAGENO-BOVINO_375x375_crop_center.webp" alt="thé matcha premium">
                             <h3>Collagène Matcha</h3>
                             <h6>32,95€</h6>
-                            <ul>
+                            <ul class="star">
                                 <li><i class="fa-solid fa-star checked"></i></li>
                                 <li><i class="fa-solid fa-star checked"></i></li>
                                 <li><i class="fa-solid fa-star checked"></i></li>
@@ -472,7 +503,7 @@
                             <img src="../images/inner-cure_375x375_crop_center.webp" alt="thé matcha premium">
                             <h3>Inner cure</h3>
                             <h6>34,95€</h6>
-                            <ul>
+                            <ul class="star">
                                 <li><i class="fa-solid fa-star checked"></i></li>
                                 <li><i class="fa-solid fa-star checked"></i></li>
                                 <li><i class="fa-solid fa-star checked"></i></li>
@@ -487,7 +518,7 @@
                             <img src="../images/fwgfswg_375x375_crop_center.webp" alt="thé matcha premium">
                             <h3>Thé matcha culinaire</h3>
                             <h6>15,95€</h6>
-                            <ul>
+                            <ul class="star">
                                 <li><i class="fa-solid fa-star checked"></i></li>
                                 <li><i class="fa-solid fa-star checked"></i></li>
                                 <li><i class="fa-solid fa-star checked"></i></li>
