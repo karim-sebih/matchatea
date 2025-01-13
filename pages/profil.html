@@ -8,56 +8,88 @@
         <link rel="shortcut icon" href="../Images/favicon.ico" type="image/x-icon">
         <meta name="description" content="Envoyez nous vos requêtes et posez-nous vos questions ici !">
         <meta name="robots" content="index, follow">
+        <script src="https://kit.fontawesome.com/ca3234fc7d.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/matcha3.css">
     </head>
     <body>
         <!--Le header sera commun-->
         <header>
-            <h1></h1>
-            <nav>
-
-            </nav>
+          <nav>
+            <ul>
+                <!-- <i class="fa-solid fa-bars"></i> -->
+                <li><a href="acceuil.html"><img src="../images/matcha tea en blanc.png" alt="matcha tea logo" class="logo"></a></li>
+                <li class="hide-when-small"><a href="#">Vente</a></li>
+                <li class="hide-when-small"><a href="#">Histoire</a></li>
+                <li class="hide-when-small"><a href="#">À propos</a></li>
+                <li class="hide-when-small"><a href="contact.html">Contact</a></li>
+                <div class="box">
+                    <a href="#">
+                        <input type="search" placeholder="search...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+                <a href="profil.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </ul>
+          </nav>
         </header>
         <main>
-            <section>
+          <section>
                 <h2 class="haut-de-page">Modifier vos informations personnelles</h2>
-            </section>
-            <section>
-                <form id="contact-form" action="/ma-page-de-traitement" method="post">
-                    <li>
-                        <li class="contact-form-space">
-                          <!--Menu déroulant :-->
-                          <label class="contact-left-column" for="gender">Civilité :</label>
-                          <select name="civilité" id="gender">
-                              <option value="">-- Sélectionner ... --</option>
-                              <option value="M">M.</option>
-                              <option value="F">Mme ou Mlle</option>
-                              <option value="autre">Autre</option>
-                              <option value="NSP">Ne souhaite pas répondre</option>
-                          </select>
-                        </li>
-                      <li class="contact-form-space">
-                        <label class="contact-left-column" for="name">Nom&nbsp;:</label>
-                        <input type="text" id="name" name="user_name" />
-                      </li>
-                      <li class="contact-form-space">
-                        <label class="contact-left-column" for="firstname">Prénom&nbsp;:</label>
-                        <input type="text" id="firstname" name="user_firstname" />
-                      </li>
-                      <li class="contact-form-space">
-                        <label class="contact-left-column" for="address">Adresse mail&nbsp;:</label>
-                        <input type="text" id="address" name="user_address"/>
-                      </li>
-                      <li class="contact-form-space">
-                        <label class="contact-left-column" for="add_postale">Adresse postale&nbsp;:</label>
-                        <input type="text" id="msg" name="user_msg"/>
-                      </li>
+          </section>
+          <section>
+              <form id="profil-form" action="/ma-page-de-traitement" method="post">
+                <div class="np">  
+                  <li class="contact-form-space">
+                      <label class="contact-left-column" for="lastname" id="nom">Nom&nbsp;:&nbsp;</label>
+                      <input class="contact-right-column" type="text" id="name" name="user_name" />
                     </li>
-                    <div id="contact-button">
-                        <button type="submit">Valider</button>
-                    </div>                      
-                </form>
-            </section>
+                    <li class="contact-form-space">
+                      <label class="contact-left-column" for="firstname" id="prenom">Prénom&nbsp;:&nbsp;</label>
+                      <input class="contact-right-column" type="text" id="firstname" name="user_firstname" />
+                    </li>
+                </div>
+                    <li class="contact-form-space">
+                      <label class="contact-left-column" for="address" id="ad"><span class="hide-when-small">Adresse&nbsp;</span>Mail&nbsp;:&nbsp;</label>
+                      <input class="contact-right-column" type="text" id="mail" name="user_mail"/>
+                    </li>
+                    <li class="contact-form-space">
+                      <label class="contact-left-column" for="address" id="rue">Nom&nbsp;de&nbsp;voie&nbsp;:&nbsp;</label>
+                      <input class="contact-right-column" type="text" id="rue_name" name="user_rue"/>
+                    </li>
+                  <div id="profil-numcomp">
+                    <li class="contact-form-space">
+                      <label class="contact-left-column" for="address" id="num">N°&nbsp;:&nbsp;</label>
+                      <input class="contact-right-column" type="text" id="rue_num" name="user_num"/>
+                    </li>
+                    <li class="contact-form-space">
+                      <label class="contact-left-column" for="address" id="adcomp">Complément<span class="hide-when-small">&nbsp;d'Adresse</span>&nbsp;:&nbsp;</label>
+                      <input class="contact-right-column" type="text" id="address_comp" name="user_comp"/>
+                    </li>
+                  </div>
+                  <div id="profil-cp">
+                    <li class="contact-form-space">
+                      <label class="contact-left-column" for="address" id="cp">Code&nbsp;Postal&nbsp;:&nbsp;</label>
+                      <input class="contact-right-column" type="text" id="code" name="user_cp"/>
+                    </li>
+                    <li class="contact-form-space">
+                      <label class="contact-left-column" for="address" id="city">Commune&nbsp;:&nbsp;</label>
+                      <input class="contact-right-column" type="text" id="ville" name="user_ville"/>
+                    </li>
+                  </div>
+                  <div id="profil-button">
+                      <button type="submit" class="cancel">Annuler</button>
+                      <button type="submit" class="bouton">Enregistrer</button>
+                  </div>                      
+              </form>
+          </section>
         </main>
         <!--Le footer sera commun-->
         <footer>&copy; </footer>

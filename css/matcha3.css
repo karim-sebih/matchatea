@@ -24,6 +24,7 @@ body{
     color: #256100;
     font-weight: 700;
     font-size: 30px;
+    margin-top: 8vw;
 }
 nav ul {
     width: 100%;
@@ -50,6 +51,9 @@ nav li:first-child {
 nav input{
     padding-left: 10px;
     padding-right: 10px;
+}
+nav .fa-bars{
+    display: none;
 }
   
 a:hover {
@@ -98,7 +102,7 @@ nav img {
 }
 
 /* CONTACT */
-#contact-form{
+#contact-form,#profil-form{
     display: flex;
     flex-direction: column;
     margin: 8vw;
@@ -111,12 +115,12 @@ nav img {
 }
 .contact-form-space{
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 15fr;
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 20px;
 }
-.contact-form-space label{
+.contact-form-space label, .profil-form-space label{
     align-content: center;
 }
 .contact-nom-prenom{
@@ -132,13 +136,16 @@ nav img {
 .contact-left-column{
     font-size: larger;
 }
-#confidentialité, #contact-button{
+#confidentialité, #contact-button, #profil-button{
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
-#contact-first-row{
-    margin-top: 50px;
+#confidentialité input{
+    cursor: pointer;
+}
+.np{
+    margin-top: 20px;
 }
 #contact-button{
     text-align: center;
@@ -154,6 +161,7 @@ nav img {
     height: 50px;
     width: 250px;
     border: none;
+    cursor: pointer;
 }
 .bouton:hover{
     background-color: #FFF;
@@ -169,18 +177,133 @@ nav img {
     padding: 10px;
 }
 
+/* PROFIL */
+#profil-button{
+    text-align: center;
+    display: flex;
+    align-self: center;
+    gap: 100px;
+    margin-top: 20px;
+}
 
+.cancel{
+    background-color: #fff;
+    color: #256100;
+    border-radius: 25px;
+    font-family: kodchasan;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    height: 50px;
+    width: 250px;
+    border: 1px solid #256100;
+    cursor: pointer;
+}
 
-@media screen and (max-width:950px) and (min-width:500px) {
+.cancel:hover{
+    border-color: #610;
+    color: #610;
+}
+
+.profil-form-space{
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+    /*
+#rue_name,#mail{
+    width: 100vw;
+} */
+
+/* COMMANDES */
+.fa-plus{
+    background-color: #256100;
+    border-radius: 20px;
+    color: #FFF;
+}
+.fa-minus{
+    background-color: #FFF;
+    border-radius: 20px;
+    color:#256100;
+}
+#commandes-contain{
+    margin: 8vw;
+    background-color: #e3f6e5;
+    border-style: solid;
+    border-color: #CCC;
+    border-width: 1px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+.commandes-table {
+    border-collapse: collapse;
+    text-align: center;
+}
+.commandes-table th,.commandes-table td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+}
+.cmd-dsc{
+    width: 50vw;
+}
+.cmd-prod{
+    width:14vw
+}
+.cmd-prix,.cmd-qte{
+    width:10vw
+}
+.commandes-table tbody > tr:nth-of-type(even) {
+    background-color: rgb(237 238 242);
+}
+.commandes-head{
+    border-top: none;
+    background-color: #256100;
+    color:#FFF
+}
+  
+
+@media screen and (min-width:950px) {
+
+    .np, #profil-numcomp, #profil-cp{
+        display: flex;
+        gap: 0px;
+        width: 100%;
+    }
+    #rue_num,#code{
+        width: 75px;
+    }
+}
+
+@media screen and (max-width:950px) and (min-width:600px) {
     #contact-form{
         margin: 4vw;
+    }
+    .haut-de-page{
+        margin-top: 4vw;
     }
     .contact-form-space{
         margin-left: 1vw;
         margin-right: 1vw;
     }
+    .hide-when-small{
+        display: none;
+    }
+    nav .fa-bars{
+        display: inline;
+        color:white;
+        height: 80px;
+        cursor: pointer;
+        padding: 5px 20px;
+        border-radius: 30px;
+        align-items: center;
+    }
+    #profil-button{
+        gap:5vw
+    }
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
     #contact-form{
         margin:2vw;
     }
@@ -199,8 +322,20 @@ nav img {
     #contact-first-row{
         margin-top: 8vw;
     }
-    .bouton{
-        width: 200px;
+    .bouton, .cancel{
+        width: 40vw;
+        padding: 1vw;
         height: 40px;
+        font-size: 4vw;
+    }
+    .hide-when-small{
+        display: none;
+    }
+    #profil-button{
+        gap: 4vw;
+    }
+    .haut-de-page{
+        font-size: 5vw;
+        margin-top: 2vw;
     }
 }
