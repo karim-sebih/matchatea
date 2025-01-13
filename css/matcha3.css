@@ -234,25 +234,20 @@ nav img {
     border-style: solid;
     border-color: #CCC;
     border-width: 1px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     font-weight: 700;
 }
 .commandes-table {
     border-collapse: collapse;
     text-align: center;
+    border: 0
 }
 .commandes-table th,.commandes-table td {
     border: 1px solid rgb(160 160 160);
     padding: 8px 10px;
 }
-.cmd-dsc{
-    width: 50vw;
-}
-.cmd-prod{
-    width:14vw
-}
-.cmd-prix,.cmd-qte{
-    width:10vw
+.total{
+    text-align: right;
 }
 .commandes-table tbody > tr:nth-of-type(even) {
     background-color: rgb(237 238 242);
@@ -274,10 +269,20 @@ nav img {
     #rue_num,#code{
         width: 75px;
     }
+
+    .cmd-dsc{
+        width: 50vw;
+    }
+    .cmd-prod{
+        width:14vw
+    }
+    .cmd-prix,.cmd-qte{
+        width:10vw
+    }
 }
 
 @media screen and (max-width:950px) and (min-width:600px) {
-    #contact-form{
+    #contact-form,#profil-form,#commandes-contain{
         margin: 4vw;
     }
     .haut-de-page{
@@ -302,9 +307,18 @@ nav img {
     #profil-button{
         gap:5vw
     }
+    .cmd-dsc{
+        width: 50vw;
+    }
+    .cmd-prod{
+        width:14vw
+    }
+    .cmd-prix,.cmd-qte{
+        width:14vw
+    }
 }
 @media screen and (max-width:600px) {
-    #contact-form{
+    #contact-form,#profil-form,#commandes-contain{
         margin:2vw;
     }
     .contact-form-space,#confidentialité, #contact-button{
@@ -337,5 +351,18 @@ nav img {
     .haut-de-page{
         font-size: 5vw;
         margin-top: 2vw;
+    }
+
+    .commandes-table{
+        width: 96vw;
+    }
+    .cmd-dsc{
+        width: auto;
+    }
+    .cmd-prod{
+        width:100px;
+    }
+    .cmd-prix,.cmd-qte{
+        width:75px;
     }
 }
