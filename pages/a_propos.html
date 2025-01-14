@@ -17,19 +17,17 @@
 </head>
 
 <body>
-
-    
     <header>
         <div class="navbar">
-            <div class="logo"><a href="">
+            <div class="logo"><a href="acceuil.html">
                     <img src="../images/matcha tea en blanc.png" alt="logo matcha tea">
                 </a>
             </div>
             <ul class="links">
-                <li><a href="../pages/ventes.html">Vente</a></li>
-                <li><a href="#">Histoire</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="ventes.html">Vente</a></li>
+                <li><a href="l'histoire.html">Histoire</a></li>
+                <li><a href="a_propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="box">
                 <a href="#">
@@ -38,10 +36,10 @@
                 </a>
             </div>
             <div class="buttons">
-            <a href="#" class="action-button-user">
+            <a href="profil.html" class="action-button-user">
                 <i class="fa-solid fa-user"></i>
             </a>
-            <a href="#" class="action-button-shop">
+            <a href="commandes.html" class="action-button-shop">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
         </div>
@@ -51,16 +49,16 @@
         </div>
         <div class="burger-menu open">
             <ul class="links">
-                <li><a href="../pages/ventes.html">Vente</a></li>
-                <li><a href="#">Histoire</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="acceuil.html">Vente</a></li>
+                <li><a href="ventes.html">Histoire</a></li>
+                <li><a href="a_propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <div class="divider"></div>
                 <div class="buttons-burger-menu">
-                    <a href="#" class="action-button-user">
+                    <a href="profil.html" class="action-button-user">
                         <i class="fa-solid fa-user"></i>
                     </a>
-                    <a href="#" class="action-button-shop">
+                    <a href="commandes.html" class="action-button-shop">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </div>
@@ -71,19 +69,13 @@
         const burgerMenuButton = document.querySelector('.burger-menu-button ')
         const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
         const burgerMenu = document.querySelector('.burger-menu')
+
         burgerMenuButton.onclick = function(){
             burgerMenu.classList.toggle('open')
             const isOpen = burgerMenu.classList.contains('open')
-            burgerMenuButtonIcon.classList= isOpen ? 'fa-solid fa-x' :'fa-solid fa-bars'
+            burgerMenuButtonIcon.classList= isOpen ? 'fa-solid fa-x' :'fa-solid fa-bars' 
         }
         </script>
-
-
-
-
-
-
-
     <main>
         <div class="text-container">
             <!-- <h3 class="title">A propos</h3> -->
@@ -125,7 +117,27 @@
 
 
     </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerNav">
+                <ul>
+                    <li><a href="acceuil.html">Acceuil</a></li>
 
+                    <li><a href="ventes.html">Vente</a></li>
+                    <li> <a href="l'histoire.html">Histoire </a></li>
+
+                    <li><a href="a_propos.html">À propos</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2025 ; Designed by<span class="designer">Karim Sebih, Jorge Santos, Raïs Mahjoub</span>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
