@@ -381,17 +381,17 @@ header{
 }
 #commandes-contain{
     margin: 8vw;
-    background-color: #e3f6e5;
-    border-style: solid;
-    border-color: #CCC;
-    border-width: 1px;
     /* border-radius: 20px; */
     font-weight: 700;
 }
 .commandes-table {
     border-collapse: collapse;
     text-align: center;
-    border: 0
+    border: 0;
+    background-color: #e3f6e5;
+    border-style: solid;
+    border-color: #CCC;
+    border-width: 1px;
 }
 .commandes-table th,.commandes-table td {
     border: 1px solid rgb(160 160 160);
@@ -407,6 +407,13 @@ header{
     border-top: none;
     background-color: #256100;
     color:#FFF
+}
+#valid-achat{
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+    margin-top: 20px;
 }
   
 
@@ -476,7 +483,7 @@ header{
         margin-left: 2vw;
         margin-right: 2vw;
     }
-    .contact-left-column,#confidentialité{
+    .contact-left-column,#confidentialité,.commandes-table{
         font-size: 4vw;
     }
     .contact-right-column{
@@ -496,7 +503,7 @@ header{
     .hide-when-small{
         display: none;
     }
-    #profil-button{
+    #profil-button,#valid-achat{
         gap: 4vw;
     }
     .haut-de-page{
